@@ -77,16 +77,16 @@ def main():
 
     # Form input pengguna
     with st.form("loan_form"):
-        person_age = st.slider("Usia", min_value=0.0, max_value=150.0, value=30.0)
+        person_age = st.slider("Usia", min_value=0, max_value=150, value=25)
         person_gender = st.selectbox("Jenis Kelamin", ["Male", "Female"])
         person_education = st.selectbox("Pendidikan", ["High School", "Associate", "Bachelor", "Master", "Doctorate"])
-        person_income = st.number_input("Pendapatan Tahunan", min_value=0.0, value=50000.0)
+        person_income = st.number_input("Pendapatan Tahunan", min_value=0.0, value=75000.0)
         person_emp_exp = st.slider("Tahun Pengalaman Kerja", min_value=0, max_value=125, value=5)
         person_home_ownership = st.selectbox("Status Tempat Tinggal", ["RENT", "MORTGAGE", "OWN", "OTHER"])
-        loan_amnt = st.number_input("Jumlah Pinjaman", min_value=50.0, value=10000.0)
+        loan_amnt = st.number_input("Jumlah Pinjaman", min_value=50.0, value=25000.0)
         loan_intent = st.selectbox("Tujuan Pinjaman", ["EDUCATION", "MEDICAL", "VENTURE", "PERSONAL", "DEBTCONSOLIDATION", "HOMEIMPROVEMENT"])
-        loan_int_rate = st.slider("Suku Bunga (%)", min_value=1.0, max_value=25.0, value=12.0)
-        cb_person_cred_hist_length = st.slider("Lama Riwayat Kredit (tahun)", 1.0, 40.0, 5.0)
+        loan_int_rate = st.slider("Suku Bunga (%)", min_value=1.0, max_value=25.0, value=15.0)
+        cb_person_cred_hist_length = st.slider("Lama Riwayat Kredit (tahun)", 1.0, 40.0, 3.5)
         credit_score = st.slider("Skor Kredit", min_value=300, max_value=850, value=650)
         previous_loan_defaults_on_file = st.selectbox("Pernah Gagal Bayar?", ["Yes", "No"])
 
