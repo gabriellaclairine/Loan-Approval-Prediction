@@ -1,57 +1,70 @@
-# Aplikasi Web Prediksi Persetujuan Pinjaman 🏦
+# Loan Approval Prediction Web App 🏦
 
-Sebuah aplikasi web yang mudah digunakan, dibangun dengan Streamlit untuk memprediksi keputusan persetujuan pinjaman. Aplikasi ini memanfaatkan model XGBoost yang telah dilatih untuk memberikan prediksi instan berdasarkan data pemohon, membantu mempercepat proses penilaian risiko kredit.
+A user-friendly web application built with Streamlit to predict loan approval decisions. This app leverages a pre-trained XGBoost model to provide instant predictions based on applicant data, helping to streamline the credit risk assessment process.
 
 
+[Image of a loan application form]
 
-## ✨ Fitur Utama
 
-- **Antarmuka Interaktif**: Tampilan web yang intuitif untuk memudahkan pengguna memasukkan informasi pemohon.
-- **Prediksi Instan**: Dapatkan hasil prediksi persetujuan pinjaman ("Approved" atau "Rejected") secara real-time.
-- **Didukung Machine Learning**: Menggunakan model klasifikasi XGBoost yang dilatih pada dataset kredit untuk pengambilan keputusan yang akurat.
-- **Preprocessing Data**: Termasuk pipeline preprocessing lengkap untuk penskalaan dan encoding input pengguna agar sesuai dengan format yang dibutuhkan model.
+## ✨ Features
+
+- **Interactive UI**: An intuitive web interface for users to input applicant information easily.
+- **Instant Predictions**: Get real-time loan approval predictions ("Approved" or "Rejected").
+- **Powered by ML**: Utilizes an XGBoost classifier model trained on a credit dataset for accurate decision-making.
+- **Data Preprocessing**: Includes a complete preprocessing pipeline for scaling and encoding user input to match the model's requirements.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Tech Stack
 
 - **Framework**: Streamlit
 - **Machine Learning**: Scikit-learn, XGBoost
-- **Manajemen Data**: Pandas, NumPy
-- **Bahasa**: Python
+- **Data Handling**: Pandas, NumPy
+- **Core Language**: Python
 
 ---
 
-## 🚀 Cara Menjalankan Secara Lokal
+## 🚀 How to Run Locally
 
-1.  **Clone repositori ini:**
+1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/username-anda/Loan-Approval-Prediction.git](https://github.com/gabriellaclairine/Loan-Approval-Prediction.git)
+    git clone https://github.com/gabriellaclairine/Loan-Approval-Prediction.git
     cd Loan-Approval-Prediction
     ```
 
-2.  **Buat dan aktifkan virtual environment (disarankan):**
+2.  **Create and activate a virtual environment (recommended):**
     ```bash
-    # Untuk Windows
+    # For Windows
     python -m venv venv
     .\venv\Scripts\activate
 
-    # Untuk macOS/Linux
+    # For macOS/Linux
     python3 -m venv venv
     source venv/bin/activate
     ```
 
-3.  **Install semua library yang dibutuhkan:**
+3.  **Install the required libraries:**
     ```bash
     pip install -r requirements.txt
     ```
-    *(Catatan: Anda perlu membuat file `requirements.txt` yang berisi semua paket yang diperlukan seperti streamlit, pandas, scikit-learn, xgboost, dll.)*
+    *(Note: You need to create a `requirements.txt` file containing all necessary packages like streamlit, pandas, scikit-learn, xgboost, etc.)*
 
-4.  **Jalankan aplikasi Streamlit:**
+4.  **Run the Streamlit app:**
     ```bash
     streamlit run app.py
     ```
 
+The application will now be running on your local server!
+
 ---
 
-## 📁 Struktur Repositori
+## 📁 Repository Structure
+
+├── app.py                      # Main Streamlit application script
+├── xgb_final_model.pkl         # Trained XGBoost model file
+├── ordinal_encoder.pkl         # Saved Ordinal Encoder
+├── onehot_encoder.pkl          # Saved One-Hot Encoder
+├── scaler.pkl                  # Saved Scaler
+├── feature_list.pkl            # List of model features
+├── requirements.txt            # Project dependencies
+└── README.md                   # This file
