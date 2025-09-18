@@ -55,16 +55,3 @@ A user-friendly web application built with Streamlit to predict loan approval de
     ```
 
 The application will now be running on your local server!
-
----
-
-## 📁 Repository Structure
-
-├── app.py                      # Main Streamlit application script
-├── xgb_final_model.pkl         # Trained XGBoost model file
-├── ordinal_encoder.pkl         # Saved Ordinal Encoder
-├── onehot_encoder.pkl          # Saved One-Hot Encoder
-├── scaler.pkl                  # Saved Scaler
-├── feature_list.pkl            # List of model features
-├── requirements.txt            # Project dependencies
-└── README.md                   # This file
